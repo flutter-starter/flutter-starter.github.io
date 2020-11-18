@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Add resources · Flutter Starter Kit</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="This will contain the repository file which will have functions to access the api data from api-sdk."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Add resources · Flutter Starter Kit"/><meta property="og:type" content="website"/><meta property="og:url" content="https://flutter-starter.github.io/"/><meta property="og:description" content="This will contain the repository file which will have functions to access the api data from api-sdk."/><meta property="og:image" content="https://flutter-starter.github.io/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://flutter-starter.github.io/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/logo.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://flutter-starter.github.io/blog/atom.xml" title="Flutter Starter Kit Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://flutter-starter.github.io/blog/feed.xml" title="Flutter Starter Kit Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/logo.png" alt="Flutter Starter Kit"/><h2 class="headerTitleWithLogo">Flutter Starter Kit</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/getting-started" target="_self">Docs</a></li><li class=""><a href="/docs/doc4" target="_self">API</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>State management</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/getting-started">Getting started</a></li><li class="navListItem"><a class="navItem" href="/docs/motivation">Motivation</a></li><li class="navListItem"><a class="navItem" href="/docs/installation">Installation</a></li><li class="navListItem"><a class="navItem" href="/docs/editor-setup">Editor setup</a></li><li class="navListItem"><a class="navItem" href="/docs/folder-structure">Folder structure</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Styleguide</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/add-image-assets">Add image assets</a></li><li class="navListItem"><a class="navItem" href="/docs/add-fonts-assets">Add fonts assets</a></li><li class="navListItem"><a class="navItem" href="/docs/splash-screen">Add splash screen</a></li><li class="navListItem"><a class="navItem" href="/docs/add-color-constants">Add color constants</a></li><li class="navListItem"><a class="navItem" href="/docs/add-theme-data">Add theme data</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Build the app</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/add-routers">Add routers</a></li><li class="navListItem"><a class="navItem" href="/docs/add-dependecies">Add dependecies</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Api sdk</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/api-sdk">Api sdk overview</a></li><li class="navListItem"><a class="navItem" href="/docs/rest">REST</a></li><li class="navListItem"><a class="navItem" href="/docs/graphql">GraphQl</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">State management</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/shared">Shared overview</a></li><li class="navListItem"><a class="navItem" href="/docs/add-models">Add models</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/add-resources">Add resources</a></li><li class="navListItem"><a class="navItem" href="/docs/add-bloc">Add bloc</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Starter kit examples</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/hacker-news-example">HackerNews App</a></li><li class="navListItem"><a class="navItem" href="/docs/github-repo-lists-example">GithubRepo Lists App</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Test</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/add-test-files">Add test files</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Deployment</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/deploy">Deployment</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Add resources</h1></header><article><div><span><p>This will contain the repository file which will have functions to access the api data from api-sdk.</p>
+<p>For example:</p>
+<pre><code class="hljs css language-dart"><span class="hljs-keyword">import</span> <span class="hljs-string">'package:api_sdk/main.dart'</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AuthenticationRepository</span> </span>{
+  Future&lt;<span class="hljs-built_in">dynamic</span>&gt; signUpWithEmailAndPassword(
+      <span class="hljs-built_in">String</span> email, <span class="hljs-built_in">String</span> password) <span class="hljs-keyword">async</span> {
+    <span class="hljs-keyword">await</span> Future.delayed(<span class="hljs-built_in">Duration</span>(seconds: <span class="hljs-number">1</span>)); <span class="hljs-comment">// simulate a network delay</span>
+    <span class="hljs-keyword">final</span> response = <span class="hljs-keyword">await</span> ApiSdk.signUpWithEmailAndPassword(
+        {<span class="hljs-string">'email'</span>: email, <span class="hljs-string">'password'</span>: password});
+
+    <span class="hljs-keyword">return</span> response;
+  }
+
+  Future&lt;<span class="hljs-built_in">dynamic</span>&gt; loginWithEmailAndPassword(
+      <span class="hljs-built_in">String</span> email, <span class="hljs-built_in">String</span> password) <span class="hljs-keyword">async</span> {
+    <span class="hljs-keyword">await</span> Future.delayed(<span class="hljs-built_in">Duration</span>(seconds: <span class="hljs-number">1</span>)); <span class="hljs-comment">// simulate a network delay</span>
+    <span class="hljs-keyword">final</span> response = <span class="hljs-keyword">await</span> ApiSdk.loginWithEmailAndPassword(
+        {<span class="hljs-string">'email'</span>: email, <span class="hljs-string">'password'</span>: password});
+
+    <span class="hljs-keyword">return</span> response;
+  }
+
+  Future&lt;<span class="hljs-built_in">dynamic</span>&gt; getUserData(<span class="hljs-built_in">int</span> id) <span class="hljs-keyword">async</span> {
+    <span class="hljs-keyword">final</span> response = <span class="hljs-keyword">await</span> ApiSdk.getUserData(id);
+
+    <span class="hljs-keyword">return</span> response;
+  }
+}
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/add-models"><span class="arrow-prev">← </span><span>Add models</span></a><a class="docs-next button" href="/docs/add-bloc"><span>Add bloc</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/logo.png" alt="Flutter Starter Kit" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/doc1.html">Getting Started (or other categories)</a><a href="/docs/doc2.html">Guides (or other categories)</a><a href="/docs/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/users">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Your Name or Your Company Name</section></footer></div></body></html>
