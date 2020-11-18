@@ -70,7 +70,7 @@
 }
 </code></pre>
 <p>for post we need to send the path which will be under <code>api-sdk/api_constants.dart</code> and a body, for get we need to send the path only.</p>
-<p>Now <code>api-sdk/main.dart</code> for api sdk will contain all the functions which app needs to access for example if app wants to access data for user it will call this function inside ApiSdk class.</p>
+<p>Now <code>api-sdk/main.dart</code> for api sdk will contain all the functions which app needs to access for example if the app wants to access data for a user it will call this function inside ApiSdk class.</p>
 <pre><code class="hljs css language-dart"><span class="hljs-keyword">static</span> getUserData(<span class="hljs-built_in">int</span> id) <span class="hljs-keyword">async</span> {
     <span class="hljs-keyword">final</span> response =
         <span class="hljs-keyword">await</span> RestApiHandlerData.getData(<span class="hljs-string">'<span class="hljs-subst">${apiConstants[<span class="hljs-string">"auth"</span>]}</span>/users/<span class="hljs-subst">$id</span>'</span>);
