@@ -6,8 +6,8 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://flutter-starter.github.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Flutter Starter Kit news and events.</subtitle>
-    <logo>https://flutter-starter.github.io/img/logo.png</logo>
-    <rights>Copyright © 2020 Your Name or Your Company Name</rights>
+    <logo>https://flutter-starter.github.io/img/logo_white.png</logo>
+    <rights>Copyright © 2020 Flutter starter kit</rights>
     <entry>
         <title type="html"><![CDATA[New Version 1.0.0]]></title>
         <id>https://flutter-starter.github.io/blog/2017/10/24/new-version-1.0.0.html</id>
