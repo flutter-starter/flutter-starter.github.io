@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>GithubRepo List App · Flutter starter</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="To see this example go to flutter-starter-kit/examples/github-repository-list"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="GithubRepo List App · Flutter starter"/><meta property="og:type" content="website"/><meta property="og:url" content="https://flutter-starter.github.io/"/><meta property="og:description" content="To see this example go to flutter-starter-kit/examples/github-repository-list"/><meta property="og:image" content="https://flutter-starter.github.io/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://flutter-starter.github.io/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/logo.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/logo_white.png" alt="Flutter starter"/><h2 class="headerTitleWithLogo">Flutter starter</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/getting-started" target="_self">Docs</a></li><li class=""><a href="https://github.com/GeekyAnts/flutter-starter-kit" target="_self">Github</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Sample apps</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/getting-started">Getting started</a></li><li class="navListItem"><a class="navItem" href="/docs/motivation">Motivation</a></li><li class="navListItem"><a class="navItem" href="/docs/installation">Installation</a></li><li class="navListItem"><a class="navItem" href="/docs/editor-setup">Editor setup</a></li><li class="navListItem"><a class="navItem" href="/docs/folder-structure">Folder structure</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Styleguide</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/add-image-assets">Add image assets</a></li><li class="navListItem"><a class="navItem" href="/docs/add-fonts-assets">Add fonts assets</a></li><li class="navListItem"><a class="navItem" href="/docs/splash-screen">Add splash screen</a></li><li class="navListItem"><a class="navItem" href="/docs/add-color-constants">Add color constants</a></li><li class="navListItem"><a class="navItem" href="/docs/add-theme-data">Add theme data</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Build the app</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/add-routers">Add routers</a></li><li class="navListItem"><a class="navItem" href="/docs/add-dependecies">Add dependecies</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">API SDK</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/api-sdk">API SDK overview</a></li><li class="navListItem"><a class="navItem" href="/docs/rest">REST</a></li><li class="navListItem"><a class="navItem" href="/docs/graphql">GraphQL</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">State management</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/shared">Shared overview</a></li><li class="navListItem"><a class="navItem" href="/docs/add-models">Add models</a></li><li class="navListItem"><a class="navItem" href="/docs/add-resources">Add resources</a></li><li class="navListItem"><a class="navItem" href="/docs/add-bloc">Add BLoC</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Sample apps</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/hacker-news-example">HackerNews App</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/github-repo-list-example">GithubRepo List App</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Test</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/add-test-files">Add test files</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Deployment</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/deploy">Deployment</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">GithubRepo List App</h1></header><article><div><span><p>To see this example go to flutter-starter-kit/examples/github-repository-list</p>
+<p>The api url is in <code>api-constants.dart</code>
+Go to your github account and create a personal access token.</p>
+<pre><code class="hljs css language-dart"><span class="hljs-comment">//For the graphql.</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">'package:graphql/client.dart'</span>;
+
+OptimisticCache cache = OptimisticCache(
+  dataIdFromObject: typenameDataIdFromObject,
+);
+GraphQLClient client() {
+  <span class="hljs-keyword">final</span> HttpLink _httpLink = HttpLink(
+    uri: <span class="hljs-string">'https://api.github.com/graphql'</span>,
+  );
+
+  <span class="hljs-keyword">final</span> AuthLink _authLink = AuthLink(
+    getToken: () =&gt; <span class="hljs-string">'Bearer YOUR GITHUB API TOKEN'</span>,
+  );
+
+  <span class="hljs-keyword">final</span> Link _link = _authLink.concat(_httpLink);
+
+  <span class="hljs-keyword">return</span> GraphQLClient(
+    cache: cache,
+    link: _link,
+  );
+}
+
+<span class="hljs-comment">//For the Rest</span>
+<span class="hljs-built_in">Map</span>&lt;<span class="hljs-built_in">String</span>, <span class="hljs-built_in">String</span>&gt; apiConstants = {<span class="hljs-string">"auth"</span>: <span class="hljs-string">"https://reqres.in/api"</span>};
+
+</code></pre>
+<p>To Signup use this credantials:</p>
+<pre><code class="hljs"><span class="hljs-attribute">Email</span> <span class="hljs-string">"eve.holt<span class="hljs-variable">@reqres</span>.in"</span>,
+Password <span class="hljs-string">"pistol"</span>
+</code></pre>
+<p>The demo for the app looks like this:</p>
+<p><img style="float: left;" src="/img/github_repo.gif"  height="500"/></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/hacker-news-example"><span class="arrow-prev">← </span><span class="function-name-prevnext">HackerNews App</span></a><a class="docs-next button" href="/docs/add-test-files"><span>Add test files</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Docs</h5><a href="/docs/getting-started">Getting Started</a></div><div><h5>Community</h5><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a target="_blank" href="https://github.com/GeekyAnts/flutter-starter-kit" rel="noreferrer noopener">GitHub</a><br/><a class="github-button" href="https://github.com/GeekyAnts/flutter-starter-kit" data-icon="octicon-star" data-count-href="https://github.com/GeekyAnts/flutter-starter-kit" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Stars</a></div><div><a href="https://geekyants.com/" target="_blank" rel="noreferrer noopener">Built with ❤️  at GeekyAnts.</a></div></section><section class="copyright" style="margin-bottom:20px"></section><section class="copyright">Copyright © 2020 Flutter starter</section></footer></div></body></html>
