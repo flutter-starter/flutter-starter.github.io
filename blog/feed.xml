@@ -9,7 +9,7 @@
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
             <title>Flutter Starter Blog</title>
-            <url>https://flutter-starter.github.io/img/logo_blue.png</url>
+            <url>https://flutter-starter.github.io/img/logo_white.png</url>
             <link>https://flutter-starter.github.io/blog</link>
         </image>
         <copyright>Copyright © 2020 Flutter Starter</copyright>
