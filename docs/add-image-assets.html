@@ -112,7 +112,7 @@
 </code></pre>
 <p>If the width and height of the rendered image are not specified on the Image widget, the nominal resolution is used to scale the asset so that it occupies the same amount of screen space as the main asset would have, just with a higher resolution.</p>
 <p>That is, if <code>.../image_ex.png</code> is 72px by 72px, then <code>.../3.0x/image_ex.png</code> should be 216px by 216px; but they both render into 72px by 72px (in logical pixels), if width and height are not specified.</p>
-<p>Now we add these assets in <code>pubspec.yaml</code> file</p>
+<p>Now, add these assets to the <code>pubspec.yaml</code> file:</p>
 <pre><code class="hljs css language-yaml"><span class="hljs-attr">assets:</span>
     <span class="hljs-bullet">-</span> <span class="hljs-string">assets/images/</span>
     <span class="hljs-bullet">-</span> <span class="hljs-string">assets/images/home/</span>
