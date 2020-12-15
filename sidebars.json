@@ -1,0 +1,47 @@
+{
+  "docs": {
+    "Introduction": [
+      "getting-started",
+      "motivation",
+      "installation",
+      "editor-setup",
+      "folder-structure"
+    ],
+    "Styleguide": [
+      "add-image-assets",
+      "add-fonts-assets",
+      "splash-screen",
+      "add-color-constants",
+      "add-theme-data"
+    ],
+    "Build the app":[
+      "add-routers",
+      "add-dependencies"
+    ],
+    "API SDK":[
+      "api-sdk",
+      "rest",
+      "graphql"
+    ],
+    "State management":[
+       "shared",
+       "add-models",
+       "add-resources",
+       "add-bloc"
+    ],
+    "Sample apps":[
+      "hacker-news-example",
+      "github-repo-list-example",
+      "weather-app-example"
+    ],
+    "Test":[
+      "add-test-files"
+    ],
+    "Deployment":[
+      "deploy"
+    ]
+  },
+  "docs-other": {
+    "First Category": ["doc4", "doc5"]
+  }
+}
