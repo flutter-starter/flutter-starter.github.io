@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Add BLoC · Flutter Starter</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Bloc will have modules for every API to fetch data and provide it to the UI. The module folder will have 4 files: **events,** **states,** **bloc** and **public**(which will export all the files)."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Add BLoC · Flutter Starter"/><meta property="og:type" content="website"/><meta property="og:url" content="https://flutter-starter.github.io/"/><meta property="og:description" content="Bloc will have modules for every API to fetch data and provide it to the UI. The module folder will have 4 files: **events,** **states,** **bloc** and **public**(which will export all the files)."/><meta property="og:image" content="https://flutter-starter.github.io/img/logo_blue.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://flutter-starter.github.io/img/logo_blue.svg"/><link rel="shortcut icon" href="/img/logo_blue.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZPYGJLQYQQ"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments); }
+              gtag('js', new Date());
+              gtag('config', 'G-ZPYGJLQYQQ');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/logo_white.png" alt="Flutter Starter"/><h2 class="headerTitleWithLogo">Flutter Starter</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/getting-started" target="_self">Docs</a></li><li class=""><a href="https://trello.com/b/wxSMZP1H/flutter-starter" target="_self">Roadmap</a></li><li class=""><a href="https://github.com/GeekyAnts/flutter-starter-kit" target="_self">Github</a></li><li class=""><a href="https://geekyants.com/hire?utm_source=flutterstarter&amp;utm_medium=header&amp;utm_campaign=flutterstarter" target="_self">Hire The Creators</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>State management</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/getting-started">Getting started</a></li><li class="navListItem"><a class="navItem" href="/docs/motivation">Motivation</a></li><li class="navListItem"><a class="navItem" href="/docs/installation">Installation</a></li><li class="navListItem"><a class="navItem" href="/docs/editor-setup">Editor setup</a></li><li class="navListItem"><a class="navItem" href="/docs/folder-structure">Folder structure</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Styleguide</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/add-image-assets">Add image assets</a></li><li class="navListItem"><a class="navItem" href="/docs/add-fonts-assets">Add fonts assets</a></li><li class="navListItem"><a class="navItem" href="/docs/splash-screen">Add splash screen</a></li><li class="navListItem"><a class="navItem" href="/docs/add-color-constants">Add color constants</a></li><li class="navListItem"><a class="navItem" href="/docs/add-theme-data">Add theme data</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Build the app</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/add-routers">Add routers</a></li><li class="navListItem"><a class="navItem" href="/docs/add-dependencies">Add dependencies</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">API SDK</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/api-sdk">API SDK overview</a></li><li class="navListItem"><a class="navItem" href="/docs/rest">API SDK REST</a></li><li class="navListItem"><a class="navItem" href="/docs/graphql">API SDK GraphQL</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">State management</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/shared">Shared overview</a></li><li class="navListItem"><a class="navItem" href="/docs/add-models">Add models</a></li><li class="navListItem"><a class="navItem" href="/docs/add-resources">Add resources</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/add-bloc">Add BLoC</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Sample apps</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/hacker-news-example">HackerNews App</a></li><li class="navListItem"><a class="navItem" href="/docs/github-repo-list-example">GithubRepo List App</a></li><li class="navListItem"><a class="navItem" href="/docs/weather-app-example">Weather App</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Test</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/add-test-files">Add test files</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Deployment</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/deploy">Deployment</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Add BLoC</h1></header><article><div><span><p>Bloc will have modules for every API to fetch data and provide it to the UI. The module folder will have 4 files: <strong>events,</strong> <strong>states,</strong> <strong>bloc</strong> and <strong>public</strong>(which will export all the files).</p>
+<pre><code class="hljs"> <span class="hljs-string">/shared</span>
+    <span class="hljs-string">/lib</span>
+      <span class="hljs-string">/modules</span>
+        <span class="hljs-string">/authentication</span>
+          <span class="hljs-string">/bloc</span>
+            <span class="hljs-string">/authentication-bloc</span>
+              <span class="hljs-string">/authentication_bloc.dart</span>
+              <span class="hljs-string">/authentication_state.dart</span>
+              <span class="hljs-string">/authentication_event.dart</span>
+              <span class="hljs-string">/authentication_bloc_public.dart</span>
+          <span class="hljs-string">/bloc_controller.dart</span>
+</code></pre>
+<p>Insert the following in the <code>authentication_state.dart</code> file:</p>
+<pre><code class="hljs css language-dart"><span class="hljs-keyword">import</span> <span class="hljs-string">'package:meta/meta.dart'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'package:equatable/equatable.dart'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'package:shared/modules/authentication/models/current_user_data.dart'</span>;
+
+<span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AuthenticationState</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Equatable</span> </span>{
+  <span class="hljs-keyword">const</span> AuthenticationState();
+
+  <span class="hljs-meta">@override</span>
+  <span class="hljs-built_in">List</span>&lt;<span class="hljs-built_in">Object</span>&gt; <span class="hljs-keyword">get</span> props =&gt; [];
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppAutheticated</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AuthenticationState</span> </span>{}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AuthenticationInitial</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AuthenticationState</span> </span>{}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AuthenticationLoading</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AuthenticationState</span> </span>{}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AuthenticationStart</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AuthenticationState</span> </span>{}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserLogoutState</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AuthenticationState</span> </span>{}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SetUserData</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AuthenticationState</span> </span>{
+  <span class="hljs-keyword">final</span> CurrentUserData currentUserData;
+  SetUserData({<span class="hljs-keyword">this</span>.currentUserData});
+  <span class="hljs-meta">@override</span>
+  <span class="hljs-built_in">List</span>&lt;<span class="hljs-built_in">Object</span>&gt; <span class="hljs-keyword">get</span> props =&gt; [currentUserData];
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AuthenticationNotAuthenticated</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AuthenticationState</span> </span>{}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AuthenticationFailure</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AuthenticationState</span> </span>{
+  <span class="hljs-keyword">final</span> <span class="hljs-built_in">String</span> message;
+
+  AuthenticationFailure({<span class="hljs-meta">@required</span> <span class="hljs-keyword">this</span>.message});
+
+  <span class="hljs-meta">@override</span>
+  <span class="hljs-built_in">List</span>&lt;<span class="hljs-built_in">Object</span>&gt; <span class="hljs-keyword">get</span> props =&gt; [message];
+}
+
+</code></pre>
+<p>Add the code shown below to the <code>authentication_event.dart</code> file:</p>
+<pre><code class="hljs css language-dart"><span class="hljs-keyword">import</span> <span class="hljs-string">'package:meta/meta.dart'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'package:equatable/equatable.dart'</span>;
+
+<span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AuthenticationEvent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Equatable</span> </span>{
+  <span class="hljs-keyword">const</span> AuthenticationEvent();
+
+  <span class="hljs-meta">@override</span>
+  <span class="hljs-built_in">List</span>&lt;<span class="hljs-built_in">Object</span>&gt; <span class="hljs-keyword">get</span> props =&gt; [];
+}
+
+<span class="hljs-comment">// Fired just after the app is launched</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppLoadedup</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AuthenticationEvent</span> </span>{}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserLogOut</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AuthenticationEvent</span> </span>{}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GetUserData</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AuthenticationEvent</span> </span>{}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserSignUp</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AuthenticationEvent</span> </span>{
+  <span class="hljs-keyword">final</span> <span class="hljs-built_in">String</span> email;
+  <span class="hljs-keyword">final</span> <span class="hljs-built_in">String</span> password;
+  UserSignUp({<span class="hljs-meta">@required</span> <span class="hljs-keyword">this</span>.email, <span class="hljs-keyword">this</span>.password});
+
+  <span class="hljs-meta">@override</span>
+  <span class="hljs-built_in">List</span>&lt;<span class="hljs-built_in">Object</span>&gt; <span class="hljs-keyword">get</span> props =&gt; [email, password];
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserLogin</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AuthenticationEvent</span> </span>{
+  <span class="hljs-keyword">final</span> <span class="hljs-built_in">String</span> email;
+  <span class="hljs-keyword">final</span> <span class="hljs-built_in">String</span> password;
+  UserLogin({<span class="hljs-meta">@required</span> <span class="hljs-keyword">this</span>.email, <span class="hljs-keyword">this</span>.password});
+
+  <span class="hljs-meta">@override</span>
+  <span class="hljs-built_in">List</span>&lt;<span class="hljs-built_in">Object</span>&gt; <span class="hljs-keyword">get</span> props =&gt; [email, password];
+}
+
+</code></pre>
+<p>Insert the following in the <code>authentication_bloc.dart</code> file:</p>
+<pre><code class="hljs css language-dart"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AuthenticationBloc</span>
+    <span class="hljs-keyword">extends</span> <span class="hljs-title">Bloc</span>&lt;<span class="hljs-title">AuthenticationEvent</span>, <span class="hljs-title">AuthenticationState</span>&gt; </span>{
+  AuthenticationBloc() : <span class="hljs-keyword">super</span>(AuthenticationInitial());
+  <span class="hljs-keyword">final</span> AuthenticationRepository authenticationService =
+      AuthenticationRepository();
+  <span class="hljs-meta">@override</span>
+  Stream&lt;AuthenticationState&gt; mapEventToState(
+      AuthenticationEvent event) <span class="hljs-keyword">async</span>* {
+    <span class="hljs-keyword">final</span> SharedPreferences sharedPreferences = <span class="hljs-keyword">await</span> prefs;
+    <span class="hljs-keyword">if</span> (event <span class="hljs-keyword">is</span> AppLoadedup) {
+      <span class="hljs-keyword">yield</span>* _mapAppSignUpLoadedState(event);
+    }
+
+    <span class="hljs-keyword">if</span> (event <span class="hljs-keyword">is</span> UserSignUp) {
+      <span class="hljs-keyword">yield</span>* _mapUserSignupToState(event);
+    }
+
+    <span class="hljs-keyword">if</span> (event <span class="hljs-keyword">is</span> UserLogin) {
+      <span class="hljs-keyword">yield</span>* _mapUserLoginState(event);
+    }
+    <span class="hljs-keyword">if</span> (event <span class="hljs-keyword">is</span> UserLogOut) {
+      sharedPreferences.setString(<span class="hljs-string">'authtoken'</span>, <span class="hljs-keyword">null</span>);
+      sharedPreferences.setInt(<span class="hljs-string">'userId'</span>, <span class="hljs-keyword">null</span>);
+      <span class="hljs-keyword">yield</span> UserLogoutState();
+    }
+    <span class="hljs-keyword">if</span> (event <span class="hljs-keyword">is</span> GetUserData) {
+      <span class="hljs-built_in">int</span> currentUserId = sharedPreferences.getInt(<span class="hljs-string">'userId'</span>);
+      <span class="hljs-keyword">final</span> data = <span class="hljs-keyword">await</span> authenticationService.getUserData(currentUserId ?? <span class="hljs-number">4</span>);
+      <span class="hljs-keyword">final</span> currentUserData = CurrentUserData.fromJson(data);
+      <span class="hljs-keyword">yield</span> SetUserData(currentUserData: currentUserData);
+    }
+  }
+</code></pre>
+<p>Insert the code shown below in the <code>authentication_bloc_public.dart</code> file:</p>
+<pre><code class="hljs css language-dart"><span class="hljs-keyword">export</span> <span class="hljs-string">'package:shared/modules/authentication/bloc/authentication/authentication_bloc.dart'</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-string">'package:shared/modules/authentication/bloc/authentication/authentication_event.dart'</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-string">'package:shared/modules/authentication/bloc/authentication/authentication_state.dart'</span>;
+
+</code></pre>
+<p>Add the code shown below to the <code>bloc_controller.dart</code> file:</p>
+<pre><code class="hljs css language-dart"><span class="hljs-keyword">import</span> <span class="hljs-string">'package:shared/main.dart'</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BlocController</span> </span>{
+  BlocController._();
+  <span class="hljs-keyword">static</span> BlocController _instance = BlocController._();
+  <span class="hljs-keyword">factory</span> BlocController() =&gt; _instance;
+
+  AuthenticationBloc authenticationBloc = AuthenticationBloc();
+}
+</code></pre>
+<p>To use it in the UI, you can access the instance as shown below:</p>
+<pre><code class="hljs css language-dart">AuthenticationBloc authenticationBloc = BlocController().authenticationBloc;
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/add-resources"><span class="arrow-prev">← </span><span>Add resources</span></a><a class="docs-next button" href="/docs/hacker-news-example"><span class="function-name-prevnext">HackerNews App</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Docs</h5><a href="/docs/getting-started">Getting Started</a><a href="/docs/hacker-news-example">Examples</a></div><div><h5>Community</h5><a href="https://twitter.com/FlutterStarter" target="_blank" rel="noreferrer noopener">Twitter</a><a href="https://discord.gg/cARywNajQe" target="_blank" rel="noreferrer noopener">Discord</a></div><div><h5>More</h5><a target="_blank" href="https://github.com/GeekyAnts/flutter-starter-kit" rel="noreferrer noopener">GitHub</a><a target="_blank" href="https://github.com/GeekyAnts/flutter-starter/blob/master/CONTRIBUTING.md" rel="noreferrer noopener">Contribution Guidelines</a><br/><a class="github-button" href="https://github.com/GeekyAnts/flutter-starter-kit" data-icon="octicon-star" data-count-href="https://github.com/GeekyAnts/flutter-starter-kit" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Stars</a></div><div><a href="https://geekyants.com/?utm_source=flutterstarter&amp;utm_medium=header&amp;utm_campaign=flutterstarter" target="_blank" rel="noreferrer noopener">Built with ❤️  at GeekyAnts.</a></div></section><section class="copyright" style="margin-bottom:20px"></section><section class="copyright">Copyright © 2020 Flutter Starter</section></footer></div></body></html>
